@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>26_行内块的幽灵空白问题</title>
+    <style>
+        div {
+            width: 600px;
+            background-color: lightskyblue;
+            /* 方案三：设置字体0 */
+            font-size: 0;
+        }
+
+        img {
+            width: 100px;
+            /* 方案一：如果兄弟元素有文本，推荐使用 */
+            /* vertical-align: bottom; */
+            /* 方案二：如果兄弟元素没有文本，可以使用 */
+            /* display: block; */
+            
+        }
+        span {
+            font-size: 20px;
+            /* 方案三：设置垂直对齐方式 */
+            vertical-align: bottom;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="../../imgs/诛仙三人行.jpg" alt="地球"><span>xg</span>
+    </div>
+</body>
+
+</html>

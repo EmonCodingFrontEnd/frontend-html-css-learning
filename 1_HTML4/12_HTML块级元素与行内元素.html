@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>12_HTML块级元素与行内元素</title>
+</head>
+
+<body>
+    <!-- 块级元素，特点：独占一行 -->
+    <!-- <marquee>我爱你</marquee>
+    <marquee>我爱你</marquee>
+    <h1>我爱你</h1>
+    <h1>我爱你</h1>
+    <p>我爱你</p>
+    <p>我爱你</p>
+    <div>我爱你</div>
+    <div>我爱你</div> -->
+
+    <!-- 行内元素，特点：不独占一行 -->
+    <!-- <input type="text">
+    <input type="text">
+    <span>我爱你</span>
+    <span>我爱你</span> -->
+
+    <!-- 规则1：块级元素中能写：行内元素、块级元素（几乎什么都能写） -->
+    <!-- <div>
+        <span>我爱你</span>
+        <input type="text">
+        <div>我爱你2</div>
+    </div> -->
+
+    <!-- 规则2：行内元素中能写：行内元素，但不能写：块级元素、 -->
+    <!-- <span>
+        <span>我爱你</span>
+        <input type="text">
+        <span>我爱你2</span>
+    </span>
+    <span>我爱你</span> -->
+
+    <!-- 特殊规则：h1~h6不能互相嵌套 -->
+    <!-- <h1>
+        我爱你1
+    </h1> -->
+
+    <!-- 特殊规则：p标签中不能写块元素 -->
+    <p>
+        <marquee>我爱你</marquee> <!-- marquee是块元素，但已经不推荐使用了，比较特殊能放到p标签。 -->
+    </p>
+</body>
+
+</html>

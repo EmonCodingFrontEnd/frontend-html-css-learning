@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .outer {
+            width: 1000px;
+            height: 200px;
+            border: 1px solid black;
+        }
+
+        /* 用过度，实现inner1移动到右边去 */
+        .inner1 {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            transition: 3s linear;
+        }
+
+        .outer:hover .inner1 {
+            transform: translate(900px);
+        }
+
+        /* 用动画，实现inner2移动到右边去 */
+        .inner2 {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            animation: wangyoudong 3s linear forwards;
+        }
+
+        @keyframes wangyoudong {
+            0% {}
+
+            50% {
+                background-color: red;
+                border-radius: 50%;
+                box-shadow: 0px 0px 20px blue;
+            }
+
+            100% {
+                transform: translate(900px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <div class="inner1">过度</div>
+        <div class="inner2">动画</div>
+    </div>
+</body>
+
+</html>

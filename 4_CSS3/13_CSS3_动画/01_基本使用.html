@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>01_基本使用</title>
+    <style>
+        .outer {
+            width: 1000px;
+            height: 100px;
+            border: 1px solid black;
+        }
+
+        .inner {
+            width: 100px;
+            height: 100px;
+            background-color: deepskyblue;
+            /* 应用动画到元素 */
+            animation-name: wangyoudong2;
+            /* 动画持续的时间 */
+            animation-duration: 3s;
+            /* <!-- 注意， 若出现刷新页面，最开始部分动画无法流畅，直接跳过了一部分的情况，必须打开浏览器的“硬件加速”功能（右上角三个点->设置->搜索“加速”->确保 “使用硬件加速模式（如果可用）” 是打开的） --> */
+            /* 动画延迟时间 */
+            animation-delay: .5s;
+        }
+
+        /* 定义一个动画（定义一组关键）——第一种方式 */
+        @keyframes wangyoudong {
+
+            /* 第一帧 */
+            from {
+                /* transform: translate(0px);
+                background-color: black; */
+            }
+
+            /* 最后一帧 */
+            to {
+                transform: translate(900px);
+                background-color: red;
+            }
+        }
+
+        /* 定义一个动画（定义一组关键）——第二种方式 */
+        @keyframes wangyoudong2 {
+
+            /* 第一帧 */
+            0% {}
+
+            29% {
+                background-color: red;
+            }
+
+            58% {
+                background-color: yellow;
+            }
+
+            88% {
+                background-color: orange;
+            }
+
+            /* 最后一帧 */
+            100% {
+                transform: translate(900px) rotate(360deg);
+                background-color: purple;
+                border-radius: 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+</body>
+
+</html>

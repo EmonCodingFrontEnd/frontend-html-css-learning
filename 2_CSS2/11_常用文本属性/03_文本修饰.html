@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>03_文本修饰</title>
+    <style>
+        div {
+            font-size: 30px;
+        }
+
+        /* 上划绿色虚线 */
+        .sgg1 {
+            text-decoration: overline dotted green;
+        }
+
+        /* 下滑红色波浪线 */
+        .sgg2 {
+            text-decoration: underline wavy red;
+        }
+
+        .sgg3 {
+            /* 删除线 */
+            text-decoration: line-through;
+        }
+
+        .sgg4,
+        ins,
+        del {
+            font-size: 30px;
+            /* 没有各种线 */
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sgg1">尚硅谷1</div>
+    <div class="sgg2">尚硅谷2</div>
+    <div class="sgg3">尚硅谷3</div>
+    <a class="sgg4" href="https://www.baidu.com">尚硅谷4</a><br>
+    <ins>测试1</ins><br>
+    <del>测试2</del>
+</body>
+
+</html>

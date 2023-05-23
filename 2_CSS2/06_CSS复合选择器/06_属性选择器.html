@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>06_属性选择器</title>
+    <style>
+        /* 第一种写法：选中具有title属性的元素 */
+        /* [title] {
+            color: red;
+        } */
+
+        /* 第二种写法：选中具有title属性，且属性值为sgg1的元素 */
+        /* [title="sgg1"] {
+            color: red;
+        } */
+
+        /* 第三种写法：选中具有title属性，且属性值以s开头的元素 */
+        /* [title^="s"] {
+            color: red;
+        } */
+
+        /* 第四种写法：选中具有title属性，且属性值以1结尾的元素 */
+        /* [title$="1"] {
+            color: red;
+        } */
+
+        /* 第五种写法：选中具有title属性，且属性值包含g的元素 */
+        [title*="g"] {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div title="sgg1">尚硅谷1</div>
+    <div title="sgg2">尚硅谷2</div>
+    <div title="gg3">尚硅谷3</div>
+    <div title="gg4">尚硅谷4</div>
+</body>
+
+</html>

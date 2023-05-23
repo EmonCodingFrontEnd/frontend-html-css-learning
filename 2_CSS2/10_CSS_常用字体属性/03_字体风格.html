@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>03_字体风格</title>
+    <style>
+        .sgg1 {
+            font-size: 100px;
+            font-style: normal;
+        }
+
+        .sgg2 {
+            font-size: 100px;
+            /* 优先斜体->其次正体 */
+            font-style: italic;
+        }
+
+        .sgg3 {
+            font-size: 100px;
+            /* 强制斜体，如果么有，通过变换生成 */
+            font-style: oblique;
+        }
+
+        em {
+            font-size: 100px;
+            font-style: normal;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="sgg1">尚硅谷1</div>
+    <div class="sgg2">尚硅谷2</div>
+    <div class="sgg3">尚硅谷3</div>
+    <em>尚硅谷4</em>
+</body>
+
+</html>

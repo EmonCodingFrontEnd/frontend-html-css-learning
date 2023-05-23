@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>05_解决浮动后的影响</title>
+    <style>
+        .outer {
+            width: 500px;
+            background-color: gray;
+            border: 1px solid black;
+            /* 第一种解决方案：仅能解决父元素问题 */
+            /* height: 122px; */
+            /* 第二种解决方案：仅能解决父元素问题 */
+            /* float: left; */
+            /* 第三种解决方案：仅能解决父元素问题 */
+            /* overflow: hidden; */
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            border: 1px solid black;
+            margin: 10px;
+        }
+
+        .box1,
+        .box2,
+        .box3,
+        .box4 {
+            float: left;
+        }
+
+        .magic {
+            /* 第四种解决方案：能解决父和兄弟元素问题，接近完美 */
+            clear: both;
+        }
+
+        /* 第五种解决方案：完美：需要确保新加入元素之前的兄弟元素，是float的 */
+        .outer::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+        <!-- <div class="magic"></div> -->
+    </div>
+    <div style="background-color: orange;">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum rerum laborum
+        obcaecati id nobis voluptatem deserunt voluptate ipsum dolore quam? Nisi iusto adipisci accusamus, commodi nam
+        doloribus inventore officia eius ipsum minima perspiciatis cupiditate, deleniti ipsam, repellat sunt provident
+        vero a perferendis hic quasi et voluptatibus voluptate molestiae dignissimos? Doloremque.
+    </div>
+</body>
+
+</html>

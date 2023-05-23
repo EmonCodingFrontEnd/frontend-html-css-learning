@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>19_超链接_锚点</title>
+</head>
+
+<body>
+    <a href="#暗夜、树与月">看暗夜、树与月</a>
+    <a href="#昆仑山">看昆仑山</a>
+
+    <p>我是原始森林</p>
+    <img width="600" src="./原始森林.jpg" alt="原始森林">
+
+    <!-- 锚点方式2，不推荐 -->
+    <a name="暗夜、树与月"></a>
+    <p>我是暗夜、树与月</p>
+    <img width="600" src="./imgs/night_tree_star.webp" alt="暗夜、树与月">
+
+    <!-- 锚点方式1，推荐 -->
+    <p id="昆仑山">我是昆仑山</p>
+    <img width="600" src="./imgs/sub/昆仑山.gif" alt="昆仑山">
+
+    <p>我是诛仙三人行</p>
+    <img width="600" src="../imgs/诛仙三人行.jpg" alt="诛仙三人行">
+
+    <p>整体的介绍完毕了</p>
+    <a href="#">回到顶部</a>
+    <a href="">刷新页面</a>
+    <a href="javascript:alert(666);">点我弹窗</a>
+</body>
+
+</html>

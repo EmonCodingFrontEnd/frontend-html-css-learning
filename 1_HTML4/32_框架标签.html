@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>32_框架标签</title>
+</head>
+
+<body>
+    <!-- 例如iframe嵌入一个普通网页 -->
+    <!-- <iframe src="https://www.bilibili.com" width="500" height="200" frameborder="0"></iframe> -->
+    <!-- 例如iframe嵌入一个其他内容 -->
+    <!-- <iframe src="./imgs/night_tree_star.webp" width="500" height="200" frameborder="0"></iframe> -->
+
+    <!-- 与超链接的 target 属性配合使用 -->
+    <a href="https://www.bilibili.com" target="container">点我看新闻</a><br>
+    <a href="https://zxsj.wanmei.com" target="container">点我看zxsj</a><br>
+    <!-- 与表单的 target 属性配合使用 -->
+    <form action="https://so.toutiao.com/search" target="container">
+        <input type="text" name="keyword">
+        <input type="submit" value="搜索">
+    </form>
+    <iframe name="container" frameborder="0"></iframe>
+</body>
+
+</html>

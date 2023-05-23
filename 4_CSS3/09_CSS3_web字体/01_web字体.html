@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>01_web字体</title>
+    <style>
+        /* Chrome->F12->Network->No throttling 调整为 Slow 3G，可以变慢速网络 */
+        /* 针对慢速网络，可以定制字体：  https://www.iconfont.cn/webfont */
+        @font-face {
+            font-family: '情书字体';
+            src: url('./font1/方正手迹.ttf');
+        }
+
+        @font-face {
+            font-family: 'webfont';
+            font-display: swap;
+            /* IE9 */
+            src: url('./font2/webfont.eot');
+            /* IE6-IE8 */
+            src: url('./font2/webfont.eot?#iefix') format('embedded-opentype'),
+                /* chrome、firefox */
+                url('./font2/webfont.woff') format('woff'),
+                /* chrome、firefox、opera、Safari、Android、IOS 4.2+ */
+                url('./font2/webfont.ttf') format('truetype'),
+                /* IOS 4.1- */
+                url('./font2/webfont.svg#FontName') format('svg');
+        }
+
+        h1.t1 {
+            font-size: 100px;
+            font-family: '情书字体';
+        }
+
+        h1.t2 {
+            font-size: 100px;
+            font-family: 'webfont';
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="t1">春风得意马蹄疾，不信人间有别离！</h1>
+    <h1 class="t2">春风得意马蹄疾，不信人间有别离！</h1>
+</body>
+
+</html>

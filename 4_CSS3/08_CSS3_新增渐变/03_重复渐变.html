@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>01_重复渐变</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 200px;
+            border: 1px solid black;
+            float: left;
+            margin-right: 50px;
+            margin-top: 20px;
+
+            text-align: center;
+            line-height: 200px;
+            font-size: 20px;
+        }
+
+        .box1 {
+            background-image: repeating-linear-gradient(red, yellow, green);
+        }
+
+        .box2 {
+            background-image: repeating-linear-gradient(to right top, red, yellow, green);
+        }
+
+        .box3 {
+            background-image: repeating-linear-gradient(20deg, red, yellow, green);
+        }
+
+        .box4 {
+            background-image: repeating-linear-gradient(red 50px, yellow 100px, green 150px);
+        }
+
+        .box5 {
+            background-image: repeating-linear-gradient(20deg, red 50px, yellow 100px, green 150px);
+            font-size: 80px;
+            font-weight: bold;
+
+            color: transparent;
+            -webkit-background-clip: text;
+        }
+
+
+
+        .box10 {
+            background-image: repeating-radial-gradient(red, yellow, green);
+        }
+
+        .box20 {
+            background-image: repeating-radial-gradient(at left top, red, yellow, green);
+        }
+
+        .box30 {
+            background-image: repeating-radial-gradient(at 100px 50px, red, yellow, green);
+        }
+
+        .box40 {
+            background-image: repeating-radial-gradient(circle, red, yellow, green);
+        }
+
+        .box50 {
+            background-image: repeating-radial-gradient(100px 100px, red, yellow, green);
+        }
+
+        .box60 {
+            background-image: repeating-radial-gradient(red 50px, yellow 100px, green 150px);
+        }
+
+        .box70 {
+            background-image: radial-gradient(100px 50px at 150px 150px, red 50px, yellow 100px, green 150px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box box1">默认情况，从上到下</div>
+    <div class="box box2">通过关键词调整线性渐变的方向</div>
+    <div class="box box3">通过角度调整线性渐变的方向</div>
+    <div class="box box4">重复线性渐变的区域</div>
+    <div class="box box5">你好啊</div>
+    <hr>
+    <div class="box box10">以中心店为圆心，默认情况</div>
+    <div class="box box20">通过关键词调整径向渐变的圆心</div>
+    <div class="box box30">通过坐标调整径向渐变的圆心</div>
+    <div class="box box40">通过circle调整径向渐变为正圆</div>
+    <div class="box box50">通过像素值调整径向渐变为正圆</div>
+    <div class="box box60">调整径向渐变的区域</div>
+    <div class="box box70">调整径向渐变的综合写法</div>
+</body>
+
+</html>

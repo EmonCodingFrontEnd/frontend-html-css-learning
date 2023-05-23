@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>14_盒子的外边距_margin的注意事项4</title>
+    <style>
+        #d1 {
+            width: 800px;
+            height: 100px;
+            background-color: deepskyblue;
+            /* margin-left: auto; */
+            /* margin-right: auto; */
+            margin: 100px auto;
+        }
+
+        span {
+            background-color: purple;
+            margin: 100px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- margin的值也可以使auto，给一个块级元素左右margin设置auto可以实现该元素在其父元素内水平居中 -->
+    <div id="d1">你好啊</div>
+    <hr>
+    <span id="s1">你好啊</span>
+</body>
+
+</html>
