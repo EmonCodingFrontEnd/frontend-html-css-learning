@@ -17,10 +17,24 @@
             text-shadow: 0 0 20px black;
         }
 
-        /* 至于在打印机或者打印预览才应用的样式 */
+        /* 只有在打印机或者打印预览才应用的样式 */
         @media print {
             h1 {
                 background: transparent;
+            }
+        }
+
+        /* 只有在屏幕上才应用的样式 */
+        @media screen {
+            h1 {
+                font-family: "华文彩云";
+            }
+        }
+
+        /* 一直都应用的样式 */
+        @media screen {
+            h1 {
+                color: red;
             }
         }
     </style>

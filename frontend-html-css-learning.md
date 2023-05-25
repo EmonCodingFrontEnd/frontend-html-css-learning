@@ -3904,3 +3904,118 @@ flex-flow: row wrap;
 - 通过`align-self`属性，可以单独调整某个伸缩项目的对齐方式。
 - 默认值为`auto`，表示继承父元素的`align-items`属性。
 
+## 17、媒体查询
+
+### 17.1、媒体类型
+
+| 值             | 含义                                                         |
+| -------------- | ------------------------------------------------------------ |
+| all            | 检测所有设备。                                               |
+| screen         | 检测电子屏幕，包括：电脑屏幕、平板屏幕、手机屏幕等。         |
+| print          | 检测打印机。                                                 |
+| ~~aural~~      | ~~已废弃，用于语音和声音合成器。~~                           |
+| ~~braille~~    | ~~已废弃，应用于盲文触摸式反馈设备。~~                       |
+| ~~embossed~~   | ~~已废弃，用于打印的盲人印刷设备。~~                         |
+| ~~handheld~~   | ~~已废弃，用于厂商设备或更小的装置，比如PAD和小型电话。~~    |
+| ~~projection~~ | ~~已废弃，用于投影设备~~                                     |
+| ~~tty~~        | ~~已废弃，用于固定的字符网格，如电报、终端设备和对字符有限制的便携设备。~~ |
+| ~~tv~~         | ~~已废弃，用于电视和网络电视。~~                             |
+
+> 完整列表请参考： https://developer.mozilla.org/zh-CN/docs/Web/CSS/@media
+
+### 17.2、媒体特性
+
+| 值               | 含义                                                         |
+| ---------------- | ------------------------------------------------------------ |
+| width            | 检测视口**宽度**                                             |
+| max-width        | 检测视口**最大宽度**                                         |
+| min-width        | 检测视口**最小宽度**                                         |
+| height           | 检测视口**高度**                                             |
+| max-height       | 检测视口**最大高度**                                         |
+| min-height       | 检测视口**最小高度**                                         |
+| device-width     | 检测设备**屏幕的宽度**                                       |
+| max-device-width | 检测设备**屏幕的最大宽度**                                   |
+| min-device-width | 检测设备**屏幕最小宽度**                                     |
+| orientation      | 检测**视口的旋转方向**（是否横屏）<br />1.portrait：视口处于纵向，即高度大于等于宽度。<br />2.landscape：视口处于横向，即宽度大于高度。 |
+
+> 完整列表请参考： https://developer.mozilla.org/zh-CN/docs/Web/CSS/@media
+
+### 17.3、运算符
+
+| 值      | 含义 |
+| ------- | ---- |
+| and     | 并且 |
+| , 或 or | 或   |
+| not     | 否定 |
+| only    | 肯定 |
+
+### 17.4、常用阈值
+
+在实际开发中，会将屏幕分为几个区间，例如：
+
+![image-20230525162249622](images/image-20230525162249622.png)
+
+### 17.5、结合外部样式的用法
+
+**用法一：**
+
+```css
+<link rel="stylesheet" media="screen and (min-width:1200px)" href="./css/huge.css">
+```
+
+**用法二：**
+
+```css
+/* 大屏幕 */
+@media screen and (min-width:992px) and (max-width:1200px) {
+    h1 {
+        background-color: deepskyblue;
+    }
+}
+```
+
+## 18、BFC
+
+### 18.1、什么是BFC
+
+- `W3C`上啊对`BFC`的定义：
+
+> 原文：Floats,absolutely positioned elements,block containers(such as inline-blocks,table-cells,and table-captions) that are not block boxes,and block boxes with 'overflow' other than 'visible'(except when that value has been propagated to the viewport) establish new block formatting contexts for their contents.
+>
+> 译文：浮动、绝对定位元素、不是块盒子的块容器（如`inline-blocks`、`table-cells`和`table-captions`），以及`overflow`属性的值除`visible`以外的块盒，将为其内容建立新的块格式化上下文。
+
+- `MDN`上对`BFC`的描述
+
+> **块格式化上下文（Block-Formatting Context，BFC)**是`Web`页面的可视`CSS`渲染的一部分，是块盒子的布局过程发生的区域，也是浮动元素与其他元素交互的区域。
+
+- 更加通俗易懂的描述
+
+> 1. BFC 是 Block Formatting Context（块级格式上下文），可以理解成元素的一个“特异功能”。
+> 2. 该“特异功能”，在默认的情况下处于关闭状态；当元素满足了某些条件后，该“特异功能”被激活。
+> 3. 所谓激活“特异功能”，专业点说就是：该元素创建了 BFC（又称：开启了 BFC）。
+
+### 18.2、开启了BFC能解决什么问题
+
+1. 元素开启 `BFC` 后，其子元素不会再产生 margin 塌陷问题。
+2. 元素开启 `BFC` 后，自己不会被其他浮动元素所覆盖。
+3. 元素开启 `BFC` 后，就算其子元素浮动，子什么元素高度也不会塌陷。
+
+### 18.3、如何开启BFC
+
+- 根元素
+- 浮动元素
+- 绝对定位、固定定位的元素
+- 行内块元素
+- 表格单元格：`table`、`thead`、`tbody`、`tfoot`、`th`、`td`、`tr`、`caption`
+- `overflow`的值不为`visible`的块元素
+- 伸缩项目
+- 多列容器
+- `column-span` 为 `all` 的元素（即使该元素没有包裹在多列容器中）
+- `display`的值，设置为`flow-root`
+
+
+
+
+
+
+
