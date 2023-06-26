@@ -3794,7 +3794,7 @@ flex-flow: row wrap;
 - 所需属性：`align-items`
 - 常用值如下：
   1. `flex-start`: 侧轴的起点对齐。
-  2. `flex-end`: 侧轴的重点对齐。
+  2. `flex-end`: 侧轴的终点对齐。
   3. `center`: 侧轴的中点对齐。
   4. `baseline`: 伸缩项目的第一行文字的基线对齐。
   5. `stretch`: 如果伸缩项目未设置高度，将占满整个容器的高度。——（默认值）
