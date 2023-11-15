@@ -3521,7 +3521,7 @@ transform: translateZ(100px) scaleZ(3) rotateY(45deg)
 
 ## 13、过渡
 
-过渡可以在不使用`Flash`动画，不使用`JavaScript`的情况下，让元素从一只猴子那个样式，平滑过渡为另一种样式。
+过渡可以在不使用`Flash`动画，不使用`JavaScript`的情况下，让元素从一种样式，平滑过渡为另一种样式。
 
 ### 13.1、transition-property
 
